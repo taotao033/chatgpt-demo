@@ -13,9 +13,12 @@ const sitePassword = import.meta.env.SITE_PASSWORD
 export const post: APIRoute = async (context) => {
   const body = await context.request.json()
   const { sign, time, messages, pass } = body
-  if ('岳青青' in messages) {
+
+  const a = '岳青青'
+  if (messages[messages.length - 1].content.includes(a)) {
     return new Response('张涛老婆。别问为什么，问了也是！')
   }
+
   if (!messages) {
     return new Response('No input text')
   }
