@@ -16,7 +16,7 @@ export const post: APIRoute = async (context) => {
 
   const a = '岳青青'
   if (messages[messages.length - 1].content.includes(a)) {
-    return new Response('张涛老婆。别问为什么，问了也是！')
+    return new Response('张涛老婆。别问为什么，问了也是！🤪')
   }
 
   if (!messages) {
